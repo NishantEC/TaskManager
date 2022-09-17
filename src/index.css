@@ -1,0 +1,35 @@
+@import "./styles/task.css" ;
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-calendars/styles/material.css";
+
+*{
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+  background-color: #5A6DB2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.priority-cards-wrapper{
+
+    width: 65rem;
+    height: 32rem;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 20rem 20rem 20rem;
+    column-gap: 2rem;
+    align-content: center;
+    place-items: center;
+
+
+}
