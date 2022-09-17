@@ -32,6 +32,7 @@ export default function UpdateTask(task) {
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
+            task.cancelUpdating(false)
     }
 
     function handleChange(e) {

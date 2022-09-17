@@ -11,7 +11,7 @@ import FetchTasks from './fetchTasks'
 
 function PriorityCard(props) {
     let tasks = FetchTasks();
- 
+    const PrioLevels = ["Average","Medium","High"]
     let pLevel = props.level
     const [Index, setIndex] = useState(0)
     const [IsUpdating, setIsUpdating] = useState(false)
@@ -31,7 +31,7 @@ function PriorityCard(props) {
            {IsUpdating &&  <UpdateTask  {...tasks.filter(task => task.id === Index)} cancelUpdating={cancelUpdate}/>}
     
     <div className="priority-card">
-        <div className="pc-header"> Priority level: {pLevel}</div>
+        <div className="pc-header"> Priority level: {PrioLevels[pLevel-1]}</div>
         {tasks.filter(item=> item.priority===pLevel).map(item =>{
             return(
                 <TaskCard {...item} key={item.id} editID= {getIndex}/>
